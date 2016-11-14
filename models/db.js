@@ -6,9 +6,6 @@ var dbURI = 'mongodb://fitnesswebapp:fitnesswebapp@ds029665.mlab.com:29665/herok
 
 mongoose.connect(dbURI);
 
-//Test
-
-
 // Monitoring for successful connection through Mongoose
 mongoose.connection.on('connected', function () {
   console.log('Mongoose connected to ' + dbURI);
