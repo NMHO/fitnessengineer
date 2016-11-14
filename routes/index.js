@@ -31,24 +31,12 @@ router.get('/newuser', function(req, res, next) {
 
 /* POST to Add User Service */
 router.post('/adduser', function(req, res, next) {
-
-/*
-    var UN = req.body.username;
-    var UE = req.body.useremail;
-    var pass = req.body.password;
-
-    var newUser = new User({
-        username : UN,
-        email : UE,    
-        password : pass    
-    });
-*/
-
+    
     var newUser = new User({
         username : req.body.username,
         email : req.body.useremail,    
         password : req.body.password    
-    });
+    });    
 
     newUser.save(function(err) {
         if (err) {
