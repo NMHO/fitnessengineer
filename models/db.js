@@ -5,7 +5,7 @@ var dbURI = 'mongodb://localhost/FitnessDB';
 //var dbURI = 'mongodb://fitnessapp:fitnessapp2016@ds147487.mlab.com:47487/heroku_q3q7179z'
 
 //var dbURI = 'mongodb://localhost/FitnessDB';
-var dbURI = 'mongo ds147537.mlab.com:47537/heroku_n8gf3pjl -u fitnessapp -p fitnessapp2016'
+//var dbURI = 'mongo ds147537.mlab.com:47537/heroku_n8gf3pjl -u fitnessapp -p fitnessapp2016'
 
 mongoose.connect(dbURI);
 
