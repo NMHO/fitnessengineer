@@ -28,9 +28,11 @@ router.get('/newuser', function(req, res, next) {
     res.render('newuser', { title: 'FitnessApp' });
 });
 
+
 /* POST to Add User Service */
 router.post('/adduser', function(req, res, next) {
 
+/*
     var UN = req.body.username;
     var UE = req.body.useremail;
     var pass = req.body.password;
@@ -40,9 +42,14 @@ router.post('/adduser', function(req, res, next) {
         email : UE,    
         password : pass    
     });
+*/
 
-    
-    
+    var newUser = new User({
+        username : req.body.username,
+        email : req.body.useremail,    
+        password : req.body.password    
+    });
+
     newUser.save(function(err) {
         if (err) {
             // If it failed, return error            
@@ -51,10 +58,13 @@ router.post('/adduser', function(req, res, next) {
         else {
             // And forward to success page
             console.log('User saved successfully!');
-            res.redirect("/index");
+            res.json(newUser);
+            //res.redirect("/index");
         }
     });
 });
+
+
 
 router.get('/traninglog', function(req, res, next) {
     
