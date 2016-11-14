@@ -4,6 +4,8 @@ var gracefulShutdown;
 var dbURI = 'mongodb://<fitnessapp>:<fitnessapp2016>@ds147487.mlab.com:47487/heroku_q3q7179z'
 mongoose.connect(dbURI);
 
+//Test
+
 
 // Monitoring for successful connection through Mongoose
 mongoose.connection.on('connected', function () {
