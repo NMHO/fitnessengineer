@@ -1,7 +1,7 @@
 var mongoose = require( 'mongoose' );
 var gracefulShutdown;
 //var dbURI = 'mongodb://localhost/FitnessDB';
-var dbURI = 'mongodb://<ittweb2016>:<fitnessengineer2016>@ds147487.mlab.com:47487/heroku_q3q7179z'
+var dbURI = 'mongodb://<fitnessapp>:<fitnessapp2016>@ds147487.mlab.com:47487/heroku_q3q7179z'
 mongoose.connect(dbURI);
 
 
