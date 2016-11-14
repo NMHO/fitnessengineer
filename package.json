@@ -20,6 +20,7 @@
     "mongoose-bcrypt": "^1.4.2",
     "morgan": "~1.7.0",
     "request": "^2.78.0",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "typescript": "^2.0.9"
   }
 }
