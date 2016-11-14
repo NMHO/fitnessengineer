@@ -6,12 +6,12 @@ require('../models/db');
 var User = require('../models/user');
 var Traning =  require('../models/traningslog');
 
-/* GET home page. */
+/* GET Font page. */
 router.get('/', function(req, res, next) {  
     res.render('front', { title: 'FitnessApp'});
 });
 
-/* GET New User page. */
+/* GET Index page. */
 router.get('/index', function(req, res, next) {
     
     User.find({}, function(err, users) {
@@ -23,7 +23,7 @@ router.get('/index', function(req, res, next) {
 });
 
 
-/* GET New User page. */
+/* GET NewUser page. */
 router.get('/newuser', function(req, res, next) {
     res.render('newuser', { title: 'FitnessApp' });
 });
@@ -59,7 +59,7 @@ router.get('/traninglog', function(req, res, next) {
     Traning.find({}, function(err, tLog) {
     //if (err) throw err;
     res.render('traninglog', {
-            "tLog" : tLog, title: 'Fitness-Log'
+            "tLog" : tLog, title: 'FitnessApp'
         });
     });
 });

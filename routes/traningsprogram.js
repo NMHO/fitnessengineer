@@ -29,7 +29,7 @@ router.get('/newexercise', function(req, res, next) {
 });
 
 
-// Add ny træning 
+// CREATE new training 
 router.post('/addexercise', function(req, res, next) {
 
     var ex = req.body.exercise;
