@@ -7,8 +7,6 @@ var bodyParser = require('body-parser');
 
 require('./models/db');
 
-//TEST
-
 var index = require('./routes/index');
 var traningsprogram = require('./routes/traningsprogram')
 
