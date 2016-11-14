@@ -40,6 +40,8 @@ router.post('/adduser', function(req, res, next) {
         email : UE,    
         password : pass    
     });
+
+    
     
     newUser.save(function(err) {
         if (err) {

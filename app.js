@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 
 require('./models/db');
 
-var routes = require('./routes/index');
+var index = require('./routes/index');
 var traningsprogram = require('./routes/traningsprogram')
 
 var app = express();
@@ -15,9 +15,6 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
-
-//bodyParser to accept json
-app.use(bodyParser.json());
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
@@ -29,8 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/jquery', express.static(__dirname + '/node_modules/jquery/'))
 
 
-app.use('/', routes);
-//app.use('/users', users);
+app.use('/', index);
 app.use('/traningsprogram', traningsprogram);
 
 /// catch 404 and forwarding to error handler
