@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  div.index
+    div.container
+      div.row
+        div.col-xs-12.text-center.textmargin
+          h1 Velkommen til fitness træningsprogram
+      div.row
+        div.col-xs-8.col-xs-offset-2.text-center.textmargin
+          p Opret dig som bruger eller tjek din træningslog
+      div.row
+        div.col-xs-8.col-xs-offset-2         
+          h2 User List
+        div.col-xs-8.col-xs-offset-2.textmarginbig         
+          each user in userlist
+            l #{user.username}
+            br
+      div.row
+        div.col-xs-2.col-xs-offset-3.textmargin
+          a(href='/traninglog').btn.btncolor.btn-primary Træningslog
+        div.col-xs-2.col-xs
+          a(href='/newuser').btn.btncolor.btn-primary Opret bruger
+        div.col-xs-2.col-xs
+          a(href='/traningsprogram').btn.btncolor.btn-primary Opret træningsprogram
+
+
+
+
+

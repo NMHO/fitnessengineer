@@ -1,0 +1,38 @@
+extends layout
+
+block content
+    div.index
+        div.container
+            div.row
+                div.col-xs-12
+                    nav.navbar.navbar-inverse
+                        .container-fluid
+                            ul.nav.navbar-nav
+                                li.active
+                                    a(href='/') Home
+                                li
+                                    a(href='/newuser') Opret bruger
+                                li
+                                    a(href='/traningsprogram') Opret træningsprogram
+                                li
+                                    a(href='/traninglog') Træningslog
+            div.row
+                div.col-xs-12.text-center.textmargin
+                    h1 Tilføj en ny øvelse
+            div.row
+                div.col-xs-4.textmargin
+                    form#formAddExercise(name="adduser",method="post",action="/traningsprogram/addexercise")
+                        .form-group
+                            label(for='exerc') Øvelse:
+                            input#exerc.form-control(type="text", name="exercise")
+                        .form-group
+                            label(for='desc') Beskrivelse:
+                            input#desc.form-control(type="text", name="description")
+                        .form-group
+                            label(for='setNum') Sets:
+                            input#setNum.form-control(type="text", name="setNum")
+                        .form-group
+                            label(for='setNum') Reps/Tid:
+                            input#setNum.form-control(type="text", name="repsOrTime")       
+                        .form-group
+                            button(type="submit").btn.btncolor.btn-primary Submit

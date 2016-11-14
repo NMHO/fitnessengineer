@@ -1,0 +1,52 @@
+extends layout
+
+block content
+    div.index
+        div.container
+            form#formAddExercise(name="logTraning", method="post", action="/traningsprogram/logTraning")     
+                div.row
+                    div.col-xs-12
+                        nav.navbar.navbar-inverse
+                            .container-fluid
+                                ul.nav.navbar-nav
+                                    li.active
+                                        a(href='/') Home
+                                    li
+                                        a(href='/newuser') Opret bruger
+                                    li
+                                        a(href='/traningsprogram') Opret træningsprogram
+                                    li
+                                        a(href='/traninglog') Træningslog
+                div.row
+                    div.col-xs-12.text-center.textmargin
+                        h1 Træningsprogram
+                div.row
+                    div.col-xs-8.col-xs-offset-1
+                        p Her kan du oprette dit eget træningsprogram:
+                    div.col-xs-8.col-xs-offset-1.textmargin.textcolor             
+                        select#dropdownlist(name = 'selUser')
+                            option() Vælg bruger
+                            each user, i in userlist
+                                option(value = user.username) #{user.username}                        
+                div.row
+                    div.col-xs-8.col-xs-offset-2.textmargin
+                        table.table
+                            thead
+                                tr
+                                    th Øvelse 
+                                    th Beskrivelse
+                                    th Sets
+                                    th Reps/Tid 
+                            tbody
+                                each ex in exercise                                
+                                    tr 
+                                        td #{ex.exercise}
+                                        td #{ex.description}
+                                        td #{ex.setNum}
+                                        td #{ex.repsOrTime}
+                div.row
+                    div.col-xs-2.col-xs-offset-4.textmargin
+                        a(href='/traningsprogram/newexercise').btn.btncolor.bnt-primary Tilføj ny øvelse
+                    div.col-xs-2.textmargin
+                        button(type="submit").btn.btncolor.btn-primary Gemmenfør øvelsesprogram
+        

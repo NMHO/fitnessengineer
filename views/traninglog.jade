@@ -1,0 +1,42 @@
+extends layout
+
+block content
+    div.index
+        div.container
+            div.row
+                div.col-xs-12
+                    nav.navbar.navbar-inverse
+                        .container-fluid
+                            ul.nav.navbar-nav
+                                li.active
+                                    a(href='/') Home
+                                li
+                                    a(href='/newuser') Opret bruger
+                                li
+                                    a(href='/traningsprogram') Opret træningsprogram
+                                li
+                                    a(href='/traninglog') Træningslog
+            div.row
+                div.col-xs-12.text-center.textmargin
+                    h1 Træningslog
+            div.row
+                div.col-xs-8.col-xs-offset-2.textmargin
+                    p Her kan du se din træningslog:
+            div.row
+            each log, i in tLog
+                div.col-xs-8.col-xs-offset-2.textmargin
+                    table.table
+                        thead Log #{i} tilhører bruger: #{log.user}                           
+                            tr
+                                th Øvelse
+                                th Beskrivelse
+                                th Sets
+                                th Reps/Tid 
+                        tbody
+                            each traningslog in log.traningslog                       
+                                tr 
+                                    td #{traningslog.exercise}
+                                    td #{traningslog.description}
+                                    td #{traningslog.setNum}
+                                    td #{traningslog.repsOrTime} 
+

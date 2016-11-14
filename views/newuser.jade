@@ -1,0 +1,32 @@
+extends layout
+
+block content
+    div.index
+        div.container
+            div.row
+                div.col-xs-12
+                    nav.navbar.navbar-inverse
+                        .container-fluid
+                            ul.nav.navbar-nav
+                                li.active
+                                    a(href='/') Loginside
+            div.row
+                div.col-xs-12.text-center.textmargin
+                    h1 Opret bruger
+            div.row
+                div.col-xs-8.textmargin
+                    h3 Her kan du oprette en bruger
+            div.row
+                div.col-xs-4.textmargin                   
+                    form#formAddUser(name="adduser",method="post",action="/adduser")
+                        .form-group
+                            label(for='usr') Name:
+                            input#usr.form-control(type="text", name="username")
+                        .form-group
+                            label(for='email') Email:
+                            input#email.form-control(type="text", name="useremail")
+                        .form-group
+                            label(for='pass') Password:
+                            input#password.form-control(type="password", name="password", )
+                        .form-group
+                            button(type="submit").btn.btncolor.btn-primary Submit
