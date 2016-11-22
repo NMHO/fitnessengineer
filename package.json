@@ -3,17 +3,20 @@
   "version": "1.0.0",
   "private": true,
   "engines": {
-	"node": "5.9.1"
-	},
-	"main": "app.js",
+    "node": "5.9.1"
+  },
+  "main": "app.js",
   "scripts": {
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "~1.15.2",
+    "connect-flash": "^0.1.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
     "express": "~4.14.0",
+    "express-session": "^1.14.2",
     "heroku": "^0.2.0",
     "jade": "~1.11.0",
     "jquery": "^3.1.1",
@@ -23,6 +26,8 @@
     "mongoose": "^4.6.6",
     "mongoose-bcrypt": "^1.4.2",
     "morgan": "~1.7.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
     "request": "^2.78.0",
     "serve-favicon": "~2.3.0",
     "typescript": "^2.0.9"
